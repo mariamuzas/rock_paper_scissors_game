@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title> Rock Paper Scissors</title>
+    </head>
+    <body>
+        <h1>Rock Paper Scissors Game</h1>
+        <ul>
+            {% for player in players %}
+                <li>
+                    <p>{{player.name}} is playing {{player.choice}}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
