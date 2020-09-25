@@ -4,12 +4,6 @@
     </head>
     <body>
         <h1>Rock Paper Scissors Game</h1>
-        <ul>
-            {% for player in players %}
-                <li>
-                    <p>{{player.name}} is playing {{player.choice}}</p>
-                </li>
-            {% endfor %}
-        </ul>
+        {{ game_result}}
     </body>
 </html>
