@@ -4,3 +4,4 @@ class Player():
         self.name = name
         self.choice = choice
         
+    
