@@ -1,13 +1,22 @@
 
 {% extends "base.html" %}
 
-{% block intruccions %}
-<h1>How to play to Rock Paper Scissors</h1>
+{% block how_play %}
+<h2>How to play to Rock Paper Scissors:</h2>
 
-<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, quasi aspernatur. Error nesciunt, iusto quos a asperiores neque unde nobis quo, magni hic, quae consectetur doloribus debitis? Cum, ullam mollitia.
-<br>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem mollitia in ea. Recusandae dicta, impedit sit blanditiis sequi corrupti ratione ducimus suscipit vitae commodi? Perferendis neque fugit consectetur dolores ducimus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia dolores sit laboriosam doloribus officiis animi ducimus atque inventore quo rerum quod dignissimos sequi quis, in nemo expedita! Nobis, saepe ut?
+<p>
+Decide who is playing what! You would need to write in the url each player's pick and the website will prompt you with the winner. 
 </p>
-<a href="/game_1">Start playing here</a>
 
-{% endblock intruccions %}
+<p> Here, the players!!:</p>
+    <ul>
+        {% for player in players %} 
+        <li>
+            {{player.name}}
+        </li>
+        {% endfor %} 
+    </ul>
+
+<p>For example: If you want Pepe playing rock and Manoli playing paper you will to add in the url:  /rock/paper</p>
+<p>Enjoy</p>
+{% endblock how_play %}

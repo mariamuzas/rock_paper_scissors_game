@@ -3,27 +3,27 @@ from flask import render_template
 from app.models.game import *
 from app.models.player import *
 
-@app.route('/list_players')
+@app.route('/')
 def index():
-    player_1 = Player("Pepe", "rock")
-    player_2 = Player("Manoli", "scissors")
-    return render_template("index.html", players= [player_1,player_2])
+    player_1 = Player("Joey", "rock")
+    player_2 = Player("Pheobe", "scissors")
+    return render_template("how_play.html", players= [player_1,player_2])
 
-@app.route('/game_1')
+@app.route('/game_1_test')
 def start_game():
-    player_1 = Player("Pepe", "rock")
-    player_2 = Player("Manoli", "scissors")
+    player_1 = Player("Joey", "rock")
+    player_2 = Player("Pheobe", "scissors")
     result = playing_game(player_1, player_2)
     return render_template("index.html", game_result=result)
 
 @app.route('/<p1_choice>/<p2_choice>')
-def second_game(p1_choice, p2_choice):
-    player_1 = Player("Pepe", p1_choice)
-    player_2 = Player("Manoli", p2_choice)
+def the_game(p1_choice, p2_choice):
+    player_1 = Player("Joey", p1_choice)
+    player_2 = Player("Pheobe", p2_choice)
 
     result = playing_game(player_1, player_2)
-    return render_template("index.html", second_game_result=result)
+    return render_template("index.html", the_game_result=result)
 
-@app.route('/how_to_play/')
-def intruccions():
+@app.route('/')
+def instructions():
     return render_template("how_play.html")

@@ -4,4 +4,9 @@
     {{ game_result}}
 {% endblock game1 %}
 
-{{second_game_result}}
+{% block game_result %}
+    {{the_game_result}}  
+    <br>
+    <br>
+    <a href="/">Back to instructions</a>
+{% endblock game_result %}
