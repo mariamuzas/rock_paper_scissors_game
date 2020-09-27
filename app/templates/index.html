@@ -1,9 +1,7 @@
-<html>
-    <head>
-        <title> Rock Paper Scissors</title>
-    </head>
-    <body>
-        <h1>Rock Paper Scissors Game</h1>
-        {{ game_result}}
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block game1 %}
+    {{ game_result}}
+{% endblock game1 %}
+
+{{second_game_result}}
