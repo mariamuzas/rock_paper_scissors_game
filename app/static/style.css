@@ -1,0 +1,33 @@
+
+body > h1 {
+    margin: 40px auto;
+    text-align: center;
+    color: #fdcf00;
+    font-family: 'Comfortaa', cursive;
+}
+
+#how_play {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+#results {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    top: -50%;
+    text-align: center;
+    margin: 0 auto;;
+}
+
+#results > a { 
+    display: flex;
+    align-items: flex-start;
+    color: #9a00c0;
+}
+
+#results > #winner {
+    margin: 100px 0;
+    font-size: 30px;
+}

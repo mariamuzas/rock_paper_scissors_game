@@ -1,14 +1,18 @@
 <html>
     <head>
         <title> Rock Paper Scissors</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Rock Paper Scissors Game</h1>
-        
-        {% block game_result %}
-        {% endblock game_result %}
-
-        {% block how_play %}
-        {% endblock how_play %}
+        <h1>The Ultimate Rock-Paper-Scissors Game</h1>
+        <div id="how_play">
+            {% block how_play %}
+            {% endblock how_play %}
+        </div>
+        <div id="results">
+            {% block game_result %}
+            {% endblock game_result %}
+        </div>
     </body>
 </html>

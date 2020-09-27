@@ -7,7 +7,7 @@ from app.models.player import *
 def index():
     player_1 = Player("Joey", "rock")
     player_2 = Player("Pheobe", "scissors")
-    return render_template("how_play.html", players= [player_1,player_2])
+    return render_template("how_play.html", players= [player_1,player_2], player_1= player_1, player_2=player_2)
 
 @app.route('/game_1_test')
 def start_game():

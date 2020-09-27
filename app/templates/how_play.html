@@ -2,7 +2,7 @@
 {% extends "base.html" %}
 
 {% block how_play %}
-<h2>How to play to Rock Paper Scissors:</h2>
+<h2>How to play:</h2>
 
 <p>
 Decide who is playing what! You would need to write in the url each player's pick and the website will prompt you with the winner. 
@@ -17,6 +17,6 @@ Decide who is playing what! You would need to write in the url each player's pic
         {% endfor %} 
     </ul>
 
-<p>For example: If you want Pepe playing rock and Manoli playing paper you will to add in the url:  /rock/paper</p>
-<p>Enjoy</p>
+<p>For example: If you want {{player_1.name}} playing rock and {{player_2.name}} playing paper you will to add in the url:  /rock/paper</p>
+<p>Enjoy!</p>
 {% endblock how_play %}
